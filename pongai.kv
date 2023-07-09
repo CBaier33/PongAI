@@ -1,0 +1,74 @@
+<PongBall>:
+    size: 35, 35
+    canvas:
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<PongPaddle>:
+    size: 200, 25
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<Menu>:
+    BoxLayout:
+        orientation: 'vertical'
+        pos: root.x * 2, root.top/2 - 45
+        size: 300, 400
+        Button:
+            id: play_human
+            text: 'Play Human'
+            on_release:
+                app.root.reset_game()
+                app.root.serve_ball(2)
+
+        Button:
+            id: play_AI
+            text: 'Play AI'
+        Button:
+            id: Quit
+            text: 'Quit'
+
+
+<PongGame>:
+    ball: pong_ball
+    player1: player_bottom
+    player2: player_top
+    menu1: menu
+
+
+    canvas:
+        Rectangle:
+            pos: self.x, self.top / 2
+            size: self.width, 10
+
+    Label:
+        font_size: 70
+        center_x: root.width - 30
+        top: root.top / 2 - 5
+        text: str(root.player1.score)
+
+    Label:
+        font_size: 70
+        center_x: root.x + 30
+        top: root.top / 2 + 105
+        text: str(root.player2.score)
+
+    PongBall:
+        id: pong_ball
+        center: self.parent.center
+
+    PongPaddle:
+        id: player_top
+        center_x: root.width / 2
+        y: root.height - self.height - 20
+
+    PongPaddle:
+        id: player_bottom
+        center_x: root.width / 2
+        y: root.y + self.height
+
+    Menu:
+        id: menu
