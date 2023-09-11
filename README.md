@@ -1,7 +1,7 @@
 # PongAI
 
-This is a simple experiement with machine learning using the Kivy Library. The inital layout for the game came fromt the basic tutorial provided in the Kivy Docs. 
-In an effort to grow my skills and try something new, I've challenged myself to turn the basic game into working AI app with the goal of uploading it to the Play/App Store. I will track progress here as I go. 
+This is a simple experiement with machine learning using the NEAT Algorithm and Kivy Python. The inital layout for the game came from the basic tutorial provided in the Kivy Docs. 
+In an effort to grow my skills and try something new, I've challenged myself to turn the basic game into working mobile app that allow for user vs. ai games, with the goal of uploading it to the Play/App Store. I will track progress here as I go. 
 
 
 9/12/23 - After another long break I finally got this project working! At this point The AI is fully functional and I have the ability to play against the AI myself or to set up two Ai's against each other. My next step will be to format the program for a mobile app to upload soon.
